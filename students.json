@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Ram",
+        "age": 23,
+        "course": "Python"
+    },
+    {
+        "name": "MSD",
+        "age": 22,
+        "course": "Python"
+    }
+]
