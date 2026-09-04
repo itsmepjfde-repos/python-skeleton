@@ -295,7 +295,7 @@ def check_eligibility():
     # The program makes a decision based
     # on the student's age.
 
-    if age >= 18:
+    if 18 <= age < 45:
 
         print(
             "✅ Student is eligible for registration."
@@ -304,7 +304,7 @@ def check_eligibility():
     else:
 
         print(
-            "❌ Student must be at least 18 years old."
+            "❌ Student must be between 18 and 45 years old."
         )
 
 

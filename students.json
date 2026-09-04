@@ -1,12 +1,16 @@
 [
     {
-        "name": "Ram",
+        "name": "Virat",
         "age": 23,
-        "course": "Python"
+        "courses": [
+            "Python"
+        ]
     },
     {
         "name": "MSD",
-        "age": 22,
-        "course": "Python"
+        "age": 35,
+        "courses": [
+            "Python"
+        ]
     }
 ]
