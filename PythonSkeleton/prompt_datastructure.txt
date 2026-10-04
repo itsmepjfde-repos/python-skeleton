@@ -1,0 +1,39 @@
+Develop and improve the existing Python Data Structures Lab in `datastructure.py`. It is a beginner-friendly Streamlit application for interactively learning Python lists, dictionaries, sets, and tuples. Preserve the existing purpose and working features; do not turn it into an unrelated app or a command-line program.
+
+## Existing app context
+
+- The app uses Streamlit with a wide layout and the title "Python Data Structures Lab".
+- Initial sample variables include:
+  - Lists: `shopping_list` and `tasks`
+  - Dictionaries: `grades` and `phonebook`
+  - Sets: `visitor_ids`, `chess_club`, and `math_club`
+  - Tuples: `coordinates` and `menu`
+- The current values are defined in `INITIAL_VARIABLES` in `datastructure.py`; retain the examples unless a change is necessary and explained.
+- The app stores editable values in `st.session_state.variables`, displays live values and their types in a sidebar, and has a reset button.
+- The selected exercise is rendered from the four exercise functions: `list_exercise()`, `dictionary_exercise()`, `set_exercise()`, and `tuple_exercise()`.
+
+## Learning behavior
+
+- Lists: allow adding and removing items. Explain that lists are ordered and mutable. Validate blank input and warn when removing an item that is not present.
+- Dictionaries: allow adding a new key or modifying an existing key's value. Use numeric input for grades and text input for phone numbers. Warn when an operation conflicts with whether a key already exists.
+- Sets: allow adding and removing values while enforcing uniqueness. Keep visitor IDs numeric when valid numeric input is provided, and use text values for club members. Explain duplicate and missing-value cases.
+- Tuples: display the selected tuple and explain that tuples are immutable. Do not offer an operation that mutates a tuple; clearly explain that a new tuple would be needed to use different values.
+- After a successful operation, show a concise confirmation and the updated value. For invalid operations, show a helpful warning and leave the data unchanged.
+- Keep edits isolated to the current Streamlit session. Reset must restore every value to its original starting value, without accidentally mutating `INITIAL_VARIABLES`.
+
+## Interface and implementation
+
+- Keep the interface clear, compact, and suitable for students new to Python. Use Streamlit controls that fit each operation and label them plainly.
+- Keep the live variable sidebar and make the selected data structure's current value easy to inspect.
+- Preserve state correctly across Streamlit reruns. Avoid unnecessary dependencies and avoid introducing persistence, authentication, or a backend.
+- Keep the implementation readable and beginner-friendly. Reuse the existing exercise functions and helpers where appropriate; avoid unrelated refactoring.
+- Handle empty input, duplicate values, missing values, and wrong operation choices with clear feedback rather than exceptions.
+
+## Acceptance criteria
+
+- The app runs with `streamlit run datastructure.py`.
+- A student can select each of the four data structures and try its appropriate operations.
+- The sidebar always reflects current values and types; successful changes are visible immediately.
+- Invalid operations do not corrupt or partially change the data.
+- Reset restores all sample variables and displays a clear reset notice.
+- Tuple values remain unchanged, with the reason explained in the interface.

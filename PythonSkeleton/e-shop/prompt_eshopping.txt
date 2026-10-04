@@ -1,0 +1,33 @@
+Generate a clean, minimal Python project skeleton for an e-supermarket CLI system. Keep all data and responses hard-coded; do not add a database or persistent business logic.
+
+## Modules and functions
+
+Create these three modules:
+
+1. `product_catalogue.py` with `list_products()`, `get_product_details()`, and `search_product()`.
+2. `order_history.py` with `list_orders()`, `get_order_details()`, and `add_order()`.
+3. `offers.py` with `list_offers()`, `get_offer_details()`, and `apply_offer()`.
+
+Each function should return a simple hard-coded response or sample data. Detail/search/apply functions may accept simple arguments such as an ID, search term, or offer code. Include clear status messages when a requested item is not found or an offer code is invalid.
+
+## CLI
+
+In `main.py`:
+
+- Import all three modules in this order: `product_catalogue`, `order_history`, then `offers`.
+- Put the interactive text menu and dispatch loop inside `main()`.
+- Provide a numbered choice for each of the nine functions and an exit choice.
+- Dispatch every valid choice to the corresponding function in the correct module.
+- Include `if __name__ == "__main__": main()`.
+
+## Interactive flow messages and timing
+
+- When each module is imported, print a clear message naming the module that was loaded.
+- Before calling a selected function, print the module being used and the function being called. For example:
+  - `[main] Calling module: product_catalogue`
+  - `[main] Calling function: list_products()`
+- At the start of every module function, print a message such as `[product_catalogue] Entered function list_products().` Print a clear completion/status message before returning, including for not-found or invalid-input cases.
+- Add a 3-second delay after each module/function progress message so students can follow the steps. Do not add delays between the individual menu-option lines.
+- After printing the selected function's returned result, display a message that the menu will return in 10 seconds, then wait 5 seconds before showing the menu again.
+
+Keep the code beginner-friendly, use descriptive names, and preserve the simple hard-coded skeleton behavior.

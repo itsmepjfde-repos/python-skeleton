@@ -1,0 +1,40 @@
+[
+    {
+        "student_id": "100",
+        "name": "Ashok",
+        "age": 23,
+        "registered_courses": []
+    },
+    {
+        "student_id": "101",
+        "name": "Bala",
+        "age": 31,
+        "registered_courses": []
+    },
+    {
+        "student_id": "102",
+        "name": "CHris",
+        "age": 23,
+        "registered_courses": [
+            "CS101"
+        ]
+    },
+    {
+        "student_id": "105",
+        "name": "Nanda",
+        "age": 20,
+        "registered_courses": [
+            "BIO110"
+        ]
+    },
+    {
+        "student_id": "107",
+        "name": "Sai",
+        "age": 33,
+        "registered_courses": [
+            "CS101",
+            "MATH201",
+            "BIO110"
+        ]
+    }
+]
